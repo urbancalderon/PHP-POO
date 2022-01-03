@@ -1,6 +1,15 @@
  <?php include 'includes/header.php';
 
-class MenuRestaurant { 
+// La interface tiene como fin que sirva como estructura para la clase y metodos (es una plantilla, un template para las clases)
+
+interface RestauranteInterface 
+{
+    public function getNombre();
+
+    public function getPrecio();
+}
+
+class MenuRestaurant implements RestauranteInterface { 
     public $nombre; 
     protected $precio;
 

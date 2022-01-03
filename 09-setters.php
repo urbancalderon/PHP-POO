@@ -1,8 +1,13 @@
 <?php include 'includes/header.php';
 
+    // Get para  obtener valor
+    // Set para agregar o modificar un valor
+    // protected = set
+
     class MenuRestaurant {
         public $nombre;
         public $precio;
+        protected $categoria;
     
         public function __construct( $nombre, $precio ) { 
             $this->nombre = $nombre;
@@ -50,4 +55,14 @@
         {
             return $this->peso;
         }
+
+        public function setCategoria($categoria)
+        {
+                $this->categoria = $categoria;
+
+                return $this;
+        }
     }
+
+    $postre = new Postre('Pastel de chocolate', 120, '150 gr');
+    $postre->setCategoria('Postre');

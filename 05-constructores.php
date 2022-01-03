@@ -1,8 +1,18 @@
-<?php include 'includes/header.php';
+<?php
+
+use MenuRestaurant as GlobalMenuRestaurant;
+
+include 'includes/header.php';
 
 class MenuRestaurant {
     public $nombre;
     public $precio;
+
+    public function __construct($nombre, $precio)
+    {
+        $this->nombre = $nombre;
+        $this->precio = $precio;
+    }
 
     public function getNombre() 
     {
@@ -14,3 +24,7 @@ class MenuRestaurant {
         return $this->precio;
     }
 }
+
+$bebida = new MenuRestaurant("Jugo de Naranja", 30);
+
+echo $bebida->getNombre();

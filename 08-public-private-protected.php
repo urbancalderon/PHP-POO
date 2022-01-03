@@ -1,5 +1,9 @@
 <?php include 'includes/header.php';
 
+// Public - se puede acceder en cualquier lugar, (objeto o clase)
+// Protected - Se puede acceder unicamente en la clase
+// Private - No puede ser accedido por los hijos
+
 class MenuRestaurant {
     public $nombre;
     public $precio; 

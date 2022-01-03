@@ -1,6 +1,8 @@
 <?php include 'includes/header.php';
 
-class MenuRestaurant { 
+// Las clases abstractas son clases que no se pueden heredar pero sus clases hijas si
+
+abstract class MenuRestaurant { 
     public $nombre; 
     protected $precio;
 
@@ -49,3 +51,6 @@ class Postre extends MenuRestaurant {
         return $this->peso;
     }
 }
+
+$postre = new Postre('Pastel de Fresa', 100, '200g');
+var_dump($postre);
